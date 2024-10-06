@@ -40,7 +40,6 @@ section {
     border-radius: 8px;
     box-sizing: border-box; /* Ensure padding is included in width */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure section takes full width */
 }
 
 h2 {
