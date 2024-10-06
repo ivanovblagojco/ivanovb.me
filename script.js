@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const skills = [
-        { id: "html", level: "90%" },
-        { id: "css", level: "80%" },
-        { id: "javascript", level: "70%" },
+        { id: "java", level: "90%" },
+        { id: "react", level: "80%" },
+        { id: "net", level: "60%" },
     ];
 
     skills.forEach(skill => {

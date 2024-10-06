@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,11 +8,17 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's width/height */
+}
+
 .header {
-    background: #07102c; /* Tiffany Blue */
+    background:  #07102c; /* Diagonal gradient */
     color: white;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
 }
 
 .profile-image {
@@ -27,21 +34,25 @@ body {
 
 section {
     padding: 20px;
-    margin: 20px auto;
+    margin: 0 auto; /* Center section */
     max-width: 800px;
     background: white;
     border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding is included in width */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure section takes full width */
 }
 
 h2 {
     color: #07102c; /* Tiffany Blue */
 }
 
-.education-container, .experience-container {
+.education-container,
+.experience-container {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between;
+    width: 100%; /* Ensure containers fit within the viewport */
 }
 
 .education-entry,
@@ -50,7 +61,6 @@ h2 {
     margin: 10px;
     position: relative;
     padding-left: 30px; /* Space for the icon */
-    opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start slightly above */
     transition: opacity 0.6s ease, transform 0.6s ease; /* Transition for both opacity and position */
 }
@@ -129,6 +139,11 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    max-width: 100%; /* Ensure images don't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .education-entry,
@@ -146,5 +161,9 @@ a:hover {
     .profile-image {
         width: 100px; /* Smaller profile image on mobile */
         height: 100px;
+    }
+
+    section {
+        margin: 0 10px; /* Reduce margin on mobile to avoid overflow */
     }
 }
